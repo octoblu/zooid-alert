@@ -11,10 +11,12 @@ npm install --save zooid-alert
 ```
 
 ## Props
-| Prop      | Type   | Default | Description                          |
-| ----------| -------| --------| -------------------------------------|
-| className | string |         | Additional css classes to merge into the component |
-
+| Prop        | Type    | Default | Description                          |
+| ------------| --------| --------| -------------------------------------|
+| children    | node    |         | Alert message. |
+| className   | string  |         | Additional CSS classes to merge into the component |
+| dismissible | boolean | false   | Add a close button when truthy |
+| type        | enum    | info    | Type of alert. Options: **info**, **warning**, **error**, **success** |
 
 ## Example
 ```js
