@@ -1,0 +1,49 @@
+.root {
+  border-radius: 2px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: block;
+  margin-bottom: 12px;
+  padding: 12px;
+
+  font-size: 16px;
+}
+
+.warning {
+  composes: root;
+  color: #b96900;
+  background: #FFEED7;
+}
+
+.warning a {
+  color: #F18902;
+}
+
+.error {
+  composes: root;
+  color: #8c1418;
+  background: rgba(202, 35, 41, 0.07);
+}
+
+.error a {
+  color: #CA2329;
+}
+
+.success {
+  composes: root;
+  color: #005400;
+  background: rgba(0, 128, 0, 0.07);
+}
+
+.success a {
+  color: green;
+}
+
+.info {
+  composes: root;
+  background-color: #E3F8FF;
+  color: #005c79;
+}
+
+.info a {
+  color: #00B0E9;
+}

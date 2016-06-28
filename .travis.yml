@@ -8,7 +8,7 @@ before_deploy:
 - npm run build
 addons:
   code_climate:
-    repo_token: #get repo_token from https://codeclimate.com/dashboard
+    repo_token: 2f5a3b362e5badea4ee25289931aebe8177c37d59ae8402ed7eb1be4090f21e3
 before_script:
 - npm install -g codeclimate-test-reporter
 after_script:
@@ -17,6 +17,7 @@ after_script:
 deploy:
   provider: npm
   email: serveradmin@octoblu.com
-  skip_cleanup: true
+  api_key:
+    secure: Jvmj1IAhuCuDrVQuiv/sNg0AMjxS6GHETaA+MHKXjmw/+jtjWXY2EstX4QS1gKjcz6BuWtdSq8/oTMNkJWsl6p4rARIA+SHvi7uVqyd/B74wXF7VWIuAsFQARPSMPPLaQetCfnXbwp4qCSvEAbizRTpHMPjBTPlML20opv77IGnoC2yewpltuozKlrZLCOl10VZjfWwKnPgyR193EvucJMCc84jFv7vCq4q62+HTfsFCxg6MbKlKV9DiZOENuj2X9hgEDfKp2Xh+LQuxW1JBkLPAwyjEbcS7TLFO93HI0IOp3YR854mFnEy9jMOxbNpf/qTsRZD3PgsyW+iE+OWocGz75W0UMJVp0YwVbYDScwdWQiEiRZKw/EWkKBDQeuyCBaibAV+ANEEUPWuRqXVgbT/4MwDBgPyEJbByltEdPGGPaeXI9eg4EavmgJjD+HsrXc8tXzfMPjoo/yaIAThLSkmILQGqxoES+05PDi9lKTmCJn5AuQWpxUFR9iUTWvX2s38RsnVaANt4+aPvY3M/6YwTAIr6S1gLKrEw9KVDSbEqCmCh3N/EOL7Z9MDGqzmKDQWhtS5HwpEv9SkISJf0WUd202u+gu3fo6vICZ7Z2ZulYiWDYZvS/JBltIFtXSpmy2GYeR0cOhw4qVhF2xMXq5FV9FQPvcHlQsay92v/smk=
   on:
     tags: true
