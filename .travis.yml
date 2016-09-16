@@ -1,9 +1,6 @@
 language: node_js
 node_js:
 - '5'
-branches:
-  only:
-  - "/^v[0-9]/"
 before_deploy:
 - npm run build
 addons:
@@ -21,3 +18,5 @@ deploy:
     secure: Jvmj1IAhuCuDrVQuiv/sNg0AMjxS6GHETaA+MHKXjmw/+jtjWXY2EstX4QS1gKjcz6BuWtdSq8/oTMNkJWsl6p4rARIA+SHvi7uVqyd/B74wXF7VWIuAsFQARPSMPPLaQetCfnXbwp4qCSvEAbizRTpHMPjBTPlML20opv77IGnoC2yewpltuozKlrZLCOl10VZjfWwKnPgyR193EvucJMCc84jFv7vCq4q62+HTfsFCxg6MbKlKV9DiZOENuj2X9hgEDfKp2Xh+LQuxW1JBkLPAwyjEbcS7TLFO93HI0IOp3YR854mFnEy9jMOxbNpf/qTsRZD3PgsyW+iE+OWocGz75W0UMJVp0YwVbYDScwdWQiEiRZKw/EWkKBDQeuyCBaibAV+ANEEUPWuRqXVgbT/4MwDBgPyEJbByltEdPGGPaeXI9eg4EavmgJjD+HsrXc8tXzfMPjoo/yaIAThLSkmILQGqxoES+05PDi9lKTmCJn5AuQWpxUFR9iUTWvX2s38RsnVaANt4+aPvY3M/6YwTAIr6S1gLKrEw9KVDSbEqCmCh3N/EOL7Z9MDGqzmKDQWhtS5HwpEv9SkISJf0WUd202u+gu3fo6vICZ7Z2ZulYiWDYZvS/JBltIFtXSpmy2GYeR0cOhw4qVhF2xMXq5FV9FQPvcHlQsay92v/smk=
   on:
     tags: true
+after_success:
+- bash <(curl -s https://codecov.io/bash)
